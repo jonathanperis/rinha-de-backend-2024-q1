@@ -13,6 +13,7 @@ get_repo_language() {
     # Check if the response code is in the 2xx range
     if [[ "$http_code" =~ ^2 ]]; then
         # Extract languages using sed
+        echo "Languages used in this repository:"
         echo "$response" | sed -n 's/^[[:space:]]*"\(.*\)".*$/\1/p' | tr -d '{}"' | tr ',' '\n'
     else
         echo "Failed to fetch languages for repository: $repo_url (HTTP $http_code)"
