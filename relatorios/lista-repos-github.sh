@@ -3,7 +3,7 @@
 # Function to get the repository language
 get_repo_language() {
     local repo_url="$1"
-    local token="<YOUR_GITHUB_TOKEN>"  # Replace <YOUR_GITHUB_TOKEN> with your actual GitHub token
+    local token="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"  # Replace <YOUR_GITHUB_TOKEN> with your actual GitHub token
     local api_url="https://api.github.com/repos/${repo_url#github.com/}/languages"
 
     # Make the API request
